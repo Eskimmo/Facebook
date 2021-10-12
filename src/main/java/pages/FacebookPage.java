@@ -18,6 +18,7 @@ public class FacebookPage {
     }
 
     public FacebookPage login(String email, String pass) {
+        System.out.println("123");
         getDriver().findElement(inputEmail).sendKeys(email);
         getDriver().findElement(inputPassword).sendKeys(pass);
         return new FacebookPage();
