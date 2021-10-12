@@ -9,7 +9,7 @@ public class FacebookPage {
 
     private By inputEmail = By.id("email");
     private By inputPassword = By.id("pass");
-    private By loginButton = By.xpath("//input[@data-testid='royal_login_button']");
+    private By loginButton = By.xpath("//button[@data-testid='royal_login_button']");
 
     public FacebookPage checkThatPageURLCorrect(String expectedUrl) {
         String url = getDriver().getCurrentUrl();

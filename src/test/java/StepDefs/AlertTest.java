@@ -7,22 +7,22 @@ import io.cucumber.java.en.When;
 import pages.*;
 
 public class AlertTest {
-    @Given("^I am on the \"([^\"]*)\" website$")
+    @Given("I am on the {string} website")
     public void iAmOnTheWebsite(String url) {
         new StartPage().navigateTo(url);
     }
 
-    @When("^I search for \"([^\"]*)\"$")
+    @When("I search for {string}")
     public void iSearchFor(String searchText) {
         new GooglePage().typeTextToSearchField(searchText);
     }
 
-    @And("^I click facebook link$")
+    @And("I click facebook link")
     public void clickLink() {
         new SearchResultPage().clickFacebookPage();
     }
 
-    @Then("^I am redirected to \"([^\"]*)\"$")
+    @Then("I am redirected to {string}")
     public void iAmRedirectedTo(String url) {
         new FacebookPage().checkThatPageURLCorrect(url);
     }

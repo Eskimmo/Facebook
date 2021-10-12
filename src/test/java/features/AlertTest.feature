@@ -6,4 +6,4 @@ Feature: Verify redirection
     And I click facebook link
     And I enter "badlogin" as login and "badpassword" as password
     And click login button
-    Then message "The email or phone number you’ve entered doesn’t match any account." is displayed.
+    Then message "The email or mobile number you entered isn’t connected to an account. Find your account and log in." is displayed.
